@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/splashscreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -91,7 +92,7 @@ title="Unfit";
             child: Column(
               children: [
                 Container(
-                  height: 85,
+                  height: MediaQuery.of(context).size.height*0.12,
                  // width: double.infinity,
                   color: Color(0xff1A1F38),
                   child: Center(
@@ -106,8 +107,8 @@ title="Unfit";
             
             
                   Container(
-                  height: 235,
-                  width: 310,
+                  height: MediaQuery.of(context).size.height*0.3,
+                  width: MediaQuery.of(context).size.width*0.85,
                  decoration: BoxDecoration(
                    color: Color(0xff1A1F38),
                    borderRadius: BorderRadius.circular(10)
@@ -135,10 +136,17 @@ title="Unfit";
                                 keyboardType: TextInputType.number,
                                 
                                 decoration: InputDecoration(
+                                  focusedBorder: OutlineInputBorder(
+                                                      borderRadius:
+                                                         BorderRadius.circular(50),
+                                                      borderSide: BorderSide(
+                                                        color: Colors.green,
+                                                        width: 2,
+                                                      )),
                                   
                                   enabledBorder: OutlineInputBorder(
                                                       borderRadius:
-                                                          BorderRadius.circular(50),
+                                                         BorderRadius.circular(50),
                                                       borderSide: BorderSide(
                                                         color: Colors.green,
                                                         width: 2,
@@ -180,6 +188,13 @@ title="Unfit";
                                 
                                 
                                 decoration: InputDecoration(
+                                  focusedBorder: OutlineInputBorder(
+                                                      borderRadius:
+                                                         BorderRadius.circular(50),
+                                                      borderSide: BorderSide(
+                                                        color: Colors.green,
+                                                        width: 2,
+                                                      )),
                                   
                                   enabledBorder: OutlineInputBorder(
                                                       borderRadius:
@@ -221,8 +236,8 @@ title="Unfit";
                               borderRadius: BorderRadius.circular(20),
                               color: Color(0xffF10606),
                             ),
-                            height: 55,
-                            width: 280,
+                            height: MediaQuery.of(context).size.height*0.07,
+                              width: MediaQuery.of(context).size.width*0.8,
                             child: Center(child: Text("CALCULATE",style: TextStyle(fontSize: 17,color: Colors.white),)),
                            ),
                   ),
@@ -232,8 +247,8 @@ title="Unfit";
                          ),
             
                   Container(
-                  height: 235,
-                  width: 310,
+                   height: MediaQuery.of(context).size.height*0.35,
+                width: MediaQuery.of(context).size.width*0.85,
                  decoration: BoxDecoration(
                    color: Color(0xff1A1F38),
                    borderRadius: BorderRadius.circular(10)
@@ -255,7 +270,7 @@ title="Unfit";
                              },
                             
                             
-                            child: Image.asset("loading.png",height: 30,width: 30,color: Colors.white,))
+                            child: Image.asset("assets/loading.png",height: 30,width: 30,color: Colors.white,))
                           
                         ],
             
